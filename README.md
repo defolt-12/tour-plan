@@ -1,2 +1,2 @@
 # tour-plan
-Project Khasanov Denis
+Project to Khasanov Denis
