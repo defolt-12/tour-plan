@@ -434,6 +434,12 @@ template {
   color: #333333;
 }
 
+.nav {
+  background-color: #0A223D;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
