@@ -1,0 +1,14 @@
+.breadCrumb
+  padding-top: 18px
+  padding-bottom: 19px
+  &-menu
+    padding-left: 0px
+    display: flex
+    font-size: 10px
+    line-height: 13px
+    color: $textColor
+    &__list
+      &:not(:last-child)
+        &::after
+          content: " /"
+          margin-right: 4px

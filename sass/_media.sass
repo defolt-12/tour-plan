@@ -5,24 +5,18 @@
 @media (max-width: 992px)
   .container
     max-width: 700px
-
   .header
     &-top
       padding-top: 30px
       padding-bottom: 30px
     &__search
       margin-left: auto
-    
-
-
   .search
     &__input
       max-width: 340px
-
   .logo
     &__img
       width: 132px
-  
   .nav
     padding-top: 22px
     padding-bottom: 22px
@@ -34,15 +28,13 @@
 
 @media (max-width: 768px)
   .container
-    max-width: 565px
+    max-width: 576px
     width: 92%
-  
   .header
     &__search, &__user
       display: none
     &-burger
       cursor: pointer
-
       &__menu
         display: flex
         align-items: center
@@ -56,13 +48,38 @@
           width: 16px
           height: 1px
           background-color: $textColor
-  
   .nav
     display: none
+  
+  .hotel
+    &-info
+      &__left
+        width: 100%
+      &__offer
+        order: -1
+        margin-bottom: 10px
+      &__titlle
+        flex-basis: 100%
+      &__ratting
+        margin-bottom: 17px
+      &__rigth
+        display: none
+    &-wrapper
+      // flex-basis: content
+      justify-content: space-between
+      align-items: center
+  .ratting
+    flex-basis: auto
+
 @media (max-width: 576px)
   .logo
     &__img
       width: 99px
+  .hotel
+    &-info
+      &__descriptions
+        max-width: 280px
   
+
 
   
