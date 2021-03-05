@@ -1,5 +1,6 @@
 .hotel
-  padding: 24px 0px
+  padding-top: 24px 
+  padding-bottom: 20px
   &-info
     display: flex
     justify-content: space-between
@@ -8,6 +9,7 @@
       margin-bottom: 5px  
     &__titlle
       margin: 0
+      font-family: 'Mulish', sans-serif
       font-weight: bold
       font-size: 24px
       line-height: 30px
@@ -17,6 +19,7 @@
       @include button
       padding: 4px 9px
       color: #fff
+      font-family: Mulish
       font-weight: 600
       font-size: 10px
       line-height: 13px
@@ -33,12 +36,16 @@
       min-height: 45px
       padding: 9px 6px
       color: #fff
+      &-five
+        font-size: 10px
       &-rattings
+        font-family: 'Mulish', sans-serif
         font-weight: 600
         font-size: 8px
         line-height: 10px
         margin-bottom: 2px
       &-counter
+        font-family: Mulish
         font-weight: bold
         font-size: 14px
         line-height: 18px
@@ -49,6 +56,9 @@
 
 .ratting
   flex-basis: 100%
+  &__star
+    width: 6px
+    height: 6px
   
 
   

@@ -472,8 +472,8 @@ template {
 }
 
 .breadCrumb {
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 19px;
+  padding-bottom: 18px;
 }
 
 .breadCrumb-menu {
@@ -490,7 +490,8 @@ template {
 }
 
 .hotel {
-  padding: 24px 0px;
+  padding-top: 24px;
+  padding-bottom: 20px;
 }
 
 .hotel-info {
@@ -505,6 +506,7 @@ template {
 
 .hotel-info__titlle {
   margin: 0;
+  font-family: 'Mulish', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -519,6 +521,7 @@ template {
   border-radius: 4px;
   padding: 4px 9px;
   color: #fff;
+  font-family: Mulish;
   font-weight: 600;
   font-size: 10px;
   line-height: 13px;
@@ -542,7 +545,12 @@ template {
   color: #fff;
 }
 
+.hotel-info__rigth-five {
+  font-size: 10px;
+}
+
 .hotel-info__rigth-rattings {
+  font-family: 'Mulish', sans-serif;
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
@@ -550,6 +558,7 @@ template {
 }
 
 .hotel-info__rigth-counter {
+  font-family: Mulish;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -563,6 +572,11 @@ template {
 
 .ratting {
   flex-basis: 100%;
+}
+
+.ratting__star {
+  width: 6px;
+  height: 6px;
 }
 
 @media (max-width: 1200px) {
