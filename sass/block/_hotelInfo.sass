@@ -1,0 +1,54 @@
+.hotel
+  padding: 24px 0px
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__ratting
+      margin-bottom: 5px  
+    &__titlle
+      margin: 0
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+      &--grand
+        margin-right: 14px
+    &__offer
+      @include button
+      padding: 4px 9px
+      color: #fff
+      font-weight: 600
+      font-size: 10px
+      line-height: 13px
+    &__descriptions
+      margin: 0
+      font-size: 12px
+      line-height: 15px
+    &__rigth
+      display: flex
+      flex-direction: column
+      align-items: center
+      @include button
+      max-width: 65px
+      min-height: 45px
+      padding: 9px 6px
+      color: #fff
+      &-rattings
+        font-weight: 600
+        font-size: 8px
+        line-height: 10px
+        margin-bottom: 2px
+      &-counter
+        font-weight: bold
+        font-size: 14px
+        line-height: 18px
+  &-wrapper
+    display: flex
+    flex-wrap: wrap 
+    align-items: center
+
+.ratting
+  flex-basis: 100%
+  
+
+  
