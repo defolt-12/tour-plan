@@ -5,6 +5,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    margin-bottom: 20px
     &__ratting
       margin-bottom: 5px  
     &__titlle
@@ -56,9 +57,47 @@
 
 .ratting
   flex-basis: 100%
+  line-height: 6px
   &__star
     width: 6px
     height: 6px
-  
+.swiper-container 
+  width: 100%
+  height: 450px
+  position: relative
+  border-radius: 8px 
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+.slider
+  width: 728px
+  &-button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 99
+    width: 30px
+    height: 30px
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 10px
+    background-color: transparent
+    border: none
+    outline: none
+    &--next
+      right: 18px
+      background-image: url(../image/arrow-next.svg)
+    &--prev
+      left: 18px
+      background-image: url(../image/arrow-prev.svg)
 
   
