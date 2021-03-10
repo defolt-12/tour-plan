@@ -472,8 +472,8 @@ template {
 }
 
 .breadCrumb {
-  padding-top: 18px;
-  padding-bottom: 19px;
+  padding-top: 19px;
+  padding-bottom: 18px;
 }
 
 .breadCrumb-menu {
@@ -482,6 +482,7 @@ template {
   font-size: 10px;
   line-height: 13px;
   color: #333333;
+  margin: 0;
 }
 
 .breadCrumb-menu__list:not(:last-child)::after {
@@ -490,13 +491,15 @@ template {
 }
 
 .hotel {
-  padding: 24px 0px;
+  padding-top: 24px;
+  padding-bottom: 20px;
 }
 
 .hotel-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .hotel-info__ratting {
@@ -505,6 +508,7 @@ template {
 
 .hotel-info__titlle {
   margin: 0;
+  font-family: 'Mulish', sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -517,8 +521,10 @@ template {
 .hotel-info__offer {
   background: #EC1F46;
   border-radius: 4px;
+  border: none;
   padding: 4px 9px;
   color: #fff;
+  font-family: Mulish;
   font-weight: 600;
   font-size: 10px;
   line-height: 13px;
@@ -536,13 +542,19 @@ template {
   align-items: center;
   background: #EC1F46;
   border-radius: 4px;
+  border: none;
   max-width: 65px;
   min-height: 45px;
   padding: 9px 6px;
   color: #fff;
 }
 
+.hotel-info__rigth-five {
+  font-size: 10px;
+}
+
 .hotel-info__rigth-rattings {
+  font-family: 'Mulish', sans-serif;
   font-weight: 600;
   font-size: 8px;
   line-height: 10px;
@@ -550,6 +562,7 @@ template {
 }
 
 .hotel-info__rigth-counter {
+  font-family: Mulish;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -563,11 +576,207 @@ template {
 
 .ratting {
   flex-basis: 100%;
+  line-height: 6px;
+}
+
+.ratting__star {
+  width: 6px;
+  height: 6px;
+}
+
+.hotel-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-grid__rigth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.slider {
+  width: 728px;
+  height: 450px;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slider-button--next {
+  right: 18px;
+  background-image: url(../image/arrow-next.svg);
+}
+
+.slider-button--prev {
+  left: 18px;
+  background-image: url(../image/arrow-prev.svg);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+}
+
+.swiper-container:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+}
+
+.booking {
+  width: 350px;
+  height: 210px;
+  border: 1px solid red;
+  background-color: #0A223D;
+  border-radius: 8px;
+  color: #fff;
+  padding: 28px;
+  border: 1px solid #000000;
+  filter: none;
+}
+
+.booking:hover {
+  transition: 0.8s;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.booking__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.booking__start {
+  font-family: Nunito;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.booking__pricetag {
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.booking__per-room {
+  font-family: Nunito;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking__room {
+  margin-top: 4px;
+  min-width: 80px;
+  align-items: center;
+}
+
+.booking__text {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+.booking__description {
+  margin-left: 9px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.booking__button {
+  width: 100%;
+  min-height: 45px;
+  background: #EC1F46;
+  border-radius: 4px;
+  border: none;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.booking__callCenter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.booking__callCenter-text {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.booking__callCenter-number {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.booking__callCenter-num {
+  margin-left: 8px;
+}
+
+.map {
+  width: 347px;
+  height: 213px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 580px;
+  }
+  .swiper-slide__img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -595,6 +804,24 @@ template {
   .menu__item-link {
     font-size: 12px;
     line-height: 15px;
+  }
+  .hotel-grid {
+    flex-direction: column;
+  }
+  .hotel-grid__rigth {
+    flex-direction: row;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .booking {
+    width: 340px;
+  }
+  .map {
+    height: 210px;
+  }
+  .slider {
+    width: 100%;
   }
 }
 
@@ -643,20 +870,52 @@ template {
   .hotel-info__rigth {
     display: none;
   }
+  .hotel__slider {
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .hotel__booking {
+    margin-bottom: 20px;
+  }
   .hotel-wrapper {
     justify-content: space-between;
     align-items: center;
   }
+  .hotel-grid__rigth {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+  }
+  .map__iframe {
+    width: 100%;
+  }
   .ratting {
     flex-basis: auto;
+  }
+  .slider {
+    height: 350px;
+  }
+  .swiper-slide__img {
+    height: 100%;
   }
 }
 
 @media (max-width: 576px) {
+  .container {
+    max-width: 87,5%;
+  }
   .logo__img {
     width: 99px;
   }
   .hotel-info__descriptions {
     max-width: 280px;
+  }
+  .slider {
+    height: 250px;
   }
 }
