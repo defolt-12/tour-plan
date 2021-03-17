@@ -40,3 +40,10 @@ let paralax = document.getElementById('newsletter')
     paralax.style.top = +this.pageYOffset/500+'2px'
     paralax.style.backgroundPositionY = - + +this.pageYOffset/3.5+'px'
 });
+
+let menuButton = document.querySelector(".burger");
+menuButton.addEventListener('click', function () {
+  console.log("Клик по кнопке меню");
+  document.querySelector(".nav")
+  .classList.toggle("nav--visible");
+});
