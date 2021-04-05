@@ -1,0 +1,118 @@
+.reviews
+  padding: 40px 0 70px 0
+  &-title
+    font-family: Mulish
+    font-style: normal
+    font-weight: bold
+    font-size: 38px
+    line-height: 47px
+    text-align: center
+    text-transform: uppercase
+    margin-top: 2px
+    margin-bottom: 68px
+  &-slider
+    display: flex
+    align-items: center
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: relative
+      margin: 45px auto 0
+      max-width: 731px
+      &::before
+        content: ''
+        position: absolute
+        z-index: 2
+        background-repeat: no-repeat
+        left: 62px
+        top: 13px
+        width: 70px
+        height: 47px
+        background-image: url(../image/rev-top.svg)
+      &::after
+        content: ''
+        position: absolute
+        background-repeat: no-repeat
+        right: 62px
+        top: 118px
+        width: 70px
+        height: 47px
+        background-image: url(../image/rev-rig.svg)
+    &__button
+      position: absolute
+      z-index: 99
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+      height: 30px
+      background-repeat: no-repeat
+      background-size: 10px
+      border: none
+      outline: none
+      cursor: pointer
+      background-position: center
+      background-color: transparent
+      &--prev
+        left: 20px
+        background-image: url(../image/arrow-prev-secondary.svg)
+      &--next
+        right: 17px
+        background-image: url(../image/arrow-next-secondary.svg)
+    
+    &__profile
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: relative
+      background-color: #fff
+      padding: 0 62px 30px
+      border-radius: 8px
+      height: 280px
+    &__avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+      margin-top: -45px
+      margin-bottom: 12px
+    &__username
+      margin-top: 0
+      font-family: Mulish
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      color: $praimary
+      margin-bottom: 10px
+    &__date
+      font-family: Mulish
+      font-size: 10px
+      line-height: 13px
+      margin-bottom: 4px
+    &__rating
+      line-height: 8px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 32px
+    &__star
+      width: 8px
+      height: 8px
+      margin-right: 2px
+      &:nth-child(5)
+        margin-right: 0
+    &__text
+      max-width: 537px
+      // height: 237px
+      margin: auto
+      font-family: Mulish
+      font-size: 12px
+      line-height: 19px
+      text-align: justify
+      margin-bottom: 0
+      margin-top: 0
+      overflow-y: clip
+      text-align: left
+      
+
+

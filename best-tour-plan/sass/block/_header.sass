@@ -12,10 +12,10 @@
     margin-right: auto
     margin-left: 108px
 
-  &-burger
-    &__menu
-      display: none
-      border: none
+
+  &__burger 
+    display: none
+    border: none
 
 .logo
   &__img
@@ -26,17 +26,20 @@
   position: relative 
   overflow: hidden
   border-radius: 6px 
-  height: 40px 
+  height: 40px
+  
+  &--mobile
+    &-visible
+      display: none
   
   &__input
-    background-color: #fff
     width: 350px
-    background: #F5FAFE
+    background-color: #F5FAFE
     border: none
     font-size: 12px
     padding-left: 23px
     padding-right: 75px
-    color: $textColor
+    color: #bdbdbd
     height: 100%
     outline: none
     font-family: Mulish
@@ -50,11 +53,16 @@
     height: 100%
     border: none
     background-color: $praimary
+    cursor: pointer
 
 .user
   display: flex
   align-items: center
   text-decoration: none
+
+  &--mobile
+    &-visible
+      display: none
 
   &__avatar
     border-radius: 50%
@@ -87,6 +95,9 @@
     font-size: 14px
     line-height: 18px
     color: #ffff
+    &--mobile
+      &-visible
+        display: none
     &-link
       text-transform: uppercase
 
