@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8a66a828-e07d-4844-b095-63c382f97d7a&lang=ru_RU" type="text/javascript"></script>
     <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/inputmask.min.js" defer></script>
+    <script src="js/jquery.validate.min.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -335,8 +338,8 @@
       <h2 class="newsletter-title">subscribe to our
         <span class="newsletter-title__subscribe">Newsletter</span>
       </h2>
-      <form action="send1.php" method="POST" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address" name="email">
+      <form action="send1.php" method="POST" class="form subscribe newsletter__subscribe ">
+        <input type="text" class="subscribe__input" placeholder="Your email address" name="email" required>
         <button class="subscribe__button" type="submit">Send</button>
       </form>
     </div>
@@ -458,7 +461,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img class="logo footer__logo" src="image/verrical-logo.svg" alt="Bes Tour Plan">
+          <a class="footer-logo__link" href="index.html"><img class="logo footer__logo" src="image/verrical-logo.svg" alt="Bes Tour Plan"></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title footer__title--mb">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -488,9 +491,9 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline ">Social Network</h3>
             <div class="footer__links">
-              <a href="#" class="footer__link"><img src="image/facebook.svg" alt="facebook" width="20" height="20"></a>
-              <a href="#" class="footer__link"><img src="image/youtube.svg" alt="youtube" width="20" height="20"></a>
-              <a href="#" class="footer__link"><img src="image/instagram.svg" alt="instagram" width="20" height="20"></a>
+              <a href="https://en-gb.facebook.com" class="footer__link" target="_blank"><img src="image/facebook.svg" alt="facebook" width="20" height="20"></a>
+              <a href="https://www.youtube.com" class="footer__link" target="_blank"><img src="image/youtube.svg" alt="youtube" width="20" height="20"></a>
+              <a href="https://www.instagram.com" class="footer__link" target="_blank"><img src="image/instagram.svg" alt="instagram" width="20" height="20"></a>
             </div>
           </div>
           <!-- /.footer__social-network -->
@@ -535,11 +538,15 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title">Send us a message</h3>
-            <form action="send1.php" method="POST" class="footer__form">
-              <input class="input footer__input" type="text" placeholder="Your Full Name*" name="name">
-              <input class="input footer__input" type="tel" placeholder="Phone Number*" name="phone">
+            <form action="send1.php" method="POST" class="form footer__form">
+              <div class="footer__input-group">
+                <input class="input footer__input" type="text" placeholder="Your Full Name*" required name="name">
+              </div>
+              <div class="footer__input-group">
+                <input class="input footer__input" type="tel" placeholder="Phone Number*" required name="phone" min="10" max="10">
+              </div>
               <textarea class="footer__message" cols="30" rows="10" placeholder="Message" name="message"></textarea>
-              <button class="button footer__button" type="submit">Send</button>
+              <button class="modal__form-button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
@@ -559,20 +566,22 @@
       <!-- /.container -->
     </footer>
     <div class="modal">
-      <div class="modal__overlay" data-target="form-popup">
+      <div class="modal__overlay">
       </div>
       <!-- /.modal__overlay -->
-      <div class="modal__dialog" data-target="form-popup">
+      <div class="modal__dialog">
         <button class="modal__close"><img src="image/close.svg" alt="modal close" width="16" height="16"></button>
         <div class="modal__contact-form">
           <h3 class="modal__title">Booking</h3>
-          <form action="send1.php" method="POST" class="modal__form">
-            <input class="input modal__input" type="text" placeholder="Your Full Name*" name="name">
-            <input class="input modal__input" type="tel" placeholder="Phone Number*" name="phone">
+          <form action="send1.php" method="POST" class="form modal__form"> 
+            <input class="input modal__input" type="text" placeholder="Your Full Name*" name="name" required>
+            <input class="input modal__input" type="tel" placeholder="Phone Number*" name="phone" required>
             <input type="text" class="modal__input" placeholder="Your email address" name="email">
             <textarea class="modal__message" cols="30" rows="10" placeholder="Message" name="message"></textarea>
-            <button class="button modal__button" type="submit">Send</button>
-            <span class="modal__info">* Required Fields</span>
+            <div class="modal__form-wrapper">
+              <button class="button modal__button" type="submit">Send</button>
+              <span class="modal__info">* Required Fields</span>
+            </div>
           </form>
       </div>
       <!-- /.modal__dialog -->
