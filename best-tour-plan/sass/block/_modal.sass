@@ -21,16 +21,16 @@
     opacity: 0
     visibility: hidden
     transition: all 0.3s ease-in-out
-    // &--visible
-    //   opacity: 1
-    //   visibility: visible
-    //   transition: all 0.3s ease-in-out
+    &--visible
+      opacity: 1
+      visibility: visible
+      transition: all 0.3s ease-in-out
   &__dialog
     position: fixed
-    top: 46.5%
+    top: 50%
     left: 50%
     max-width: 478px
-    min-height: 487px
+    // min-height: 487px
     transform: translate(-50%, -50%)
     padding: 33px 87px 33px 87px
     background-color: $second-color
@@ -44,6 +44,7 @@
       opacity: 1
       visibility: visible
       transition: all 0.3s ease-in-out
+      
   &__title
     text-align: center
     text-transform: uppercase
@@ -57,7 +58,7 @@
     width: 100%
     border-radius: 4px
     outline: none
-    margin-bottom: 15px
+    margin-top: 15px
     height: 50px
     padding: 18px 23px
     font-family: Mulish
@@ -68,6 +69,7 @@
     width: 100%
     border-radius: 4px
     outline: none
+    margin-top: 15px 
     margin-bottom: 9px
     padding: 18px 23px
     min-height: 123px
@@ -91,10 +93,15 @@
     margin-right: 43px
     // margin-top: -6px
   &__info
-    margin-top: 33px
+    // margin-top: 33px
     font-family: Mulish
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: $footer-text-color
+  &__form
+    margin-top: 15px
+    &-wrapper
+      display: flex
+      align-items: center
 

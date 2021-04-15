@@ -1,6 +1,6 @@
 .error {
   color: #EC1F46;
-  padding-left: 4px;
+  padding-left: 2px;
 }
 
 label.error {
@@ -13,7 +13,6 @@ label.error {
 .subscribe > label {
   position: absolute;
   top: 55px;
-  left: 5px;
   z-index: 50;
 }
 
@@ -1141,7 +1140,7 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  color: #bdbdbd;
+  color: #333333;
   border: none;
 }
 
@@ -1541,7 +1540,7 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: #bdbdbd;
+  color: #333333;
   background-color: #fff;
 }
 
@@ -1564,7 +1563,7 @@ template {
   font-family: Mulish;
   font-size: 12px;
   line-height: 15px;
-  color: #BDBDBD;
+  color: #333333;
 }
 
 .footer__button {

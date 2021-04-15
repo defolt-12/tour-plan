@@ -48,78 +48,70 @@ menuButton.addEventListener('click', function () {
   .classList.toggle("nav--visible");
 });
 
-
-// let modalOverlay = document.querySelector(".bookig__button");
-// modalOverlay.addEventListener('click', function () {
-//   console.log("Клик по кнопке меню");
-//   document.querySelector(".modal__overlay")
-//   .classList.add("modal__overlay--visible");
-// });
-
-let modalDialog = document.querySelector(".button");
-modalDialog.addEventListener('click', function () {
-  console.log("Клик по кнопке меню");
-  document.querySelector(".modal__dialog").classList.add("modal__dialog--visible");
-  document.querySelector(".modal__overlay").classList.add("modal__overlay--visible");
+document.addEventListener('click', event => {
+  const target = event.target;
+  if ( target.matches(".button") ) {
+    document.querySelector(".modal__dialog").classList.add("modal__dialog--visible");
+    document.querySelector(".modal__overlay").classList.add("modal__overlay--visible");
+  };
 });
 
-// let modalOverlay = document.querySelector(".button");
-// modalOverlay.addEventListener('click', function () {
-//   console.log("Клик по кнопке меню");
-//   document.querySelector(".modal__overlay")
-//   .classList.toggle("modal__overlay--visible");
-// });
+document.addEventListener('click', event => {
+  const target = event.target;
+  if ( target.matches('.card-button') ) {
+    document.querySelector(".modal__dialog").classList.add("modal__dialog--visible");
+    document.querySelector(".modal__overlay").classList.add("modal__overlay--visible");
+  };
+});
+
+document.addEventListener('click', event => {
+  let target = event.target;
+
+  target = target.closest('.modal__close');
+
+  if (target) {
+    document.querySelector(".modal__dialog").classList.remove("modal__dialog--visible");
+    document.querySelector(".modal__overlay").classList.remove("modal__overlay--visible");
+  }
+});
+
+document.onkeydown = function(e) {
+  switch (e.keyCode) {
+      case 27:
+        document.querySelector(".modal__dialog").classList.remove("modal__dialog--visible");
+        document.querySelector(".modal__overlay").classList.remove("modal__overlay--visible");
+        break;
+  }
+};
 
 
+$('.form').each(function() {
+  $(this).validate({
+  messages: {
+    name: {
+      required: "Please specify your name",
+      minlength: "Enter at least 2 characters",
+    },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    },
+    phone: {
+      required: "Please specify your phone",
+      minlength: "Enter your phone in international format"
+    }
+  }
+}
+);
+})
 
 
-// let btns          = document.querySelectorAll('.button');
-// let modalOverlay  = document.querySelector('.modal__overlay');
-// let modalDialog   = document.querySelector('.modal__dialog');
-// // let modalClose    = document.querySelector('.modal__close');
-// // let modals = document.querySelector('.modal');
+$('.phone-mask').mask('+7 (999) 999-99-99',  {
+  'translation': {
+    9: { pattern: /[0-9*]/ }
+  }
+}); 
 
-// btns.forEach((el) => {
-// 	el.addEventListener('click', (e) => {
-// 		let path = e.currentTarget.getAttribute('data-path');
-//     document.querySelector(`[data-target="${path}"]`).classList.toggle('modal__dialog--visible');
-//     modalDialog.classList.toggle('modal__dialog--visible');
-// 		// modals.forEach((el) => {
-// 		// 	el.classList.remove('modal__dialog--visible');
-// 		// });
+AOS.init();
+  $("input:text:visible:first").focus();
 
-// 	});
-// });
-
-// let close = document.querySelector('.modal__close');
-//   close.addEventListener('click' , function () {
-//     modalOverlay.style.display = 'none',
-//     modalDialog.style.display = 'none'
-//   });
-
-//   let closeOverlay = document.querySelector('.modal__overlay');
-//   closeOverlay.addEventListener('click' , function () {
-//     modalOverlay.style.display = 'none',
-//     modalDialog.style.display = 'none'
-//   });
-
-// modalDialog.addEventListener('click', function(e) {
-//   document.querySelector('.modal__dialog--visible').classList.remove('visible');
-//   this.classList.remove('active');
-// });
-// modalClose.addEventListener('click', (e) => {
-
-//   // if (e.target == modalOverlay) {
-// 	// 	modalOverlay.classList.remove('modal__dialog--visible');
-//   // modalClose.forEach((el) => {
-// 	// 		el.classList.remove('modal__dialog--visible');
-// 	// 	});
-// 	// }
-
-
-//   // modals.forEach((el) => {
-//   //   el.classList.remove('modal--visible')
-//   // });
-//   modalClose.classList.remove('modal__dialog--visible');
-//   // modalOverlay.classList.remove('modal__overlay--visible');
-// });
