@@ -5,7 +5,7 @@
     display: flex
     align-items: center
     justify-content: space-between
-    padding-top: 40px
+    padding-top: 39px
     padding-bottom: 40px
   
   &__search
@@ -100,8 +100,21 @@
         display: none
     &-link
       text-transform: uppercase
-
-
-
-
-      
+    &-link::before
+      content: ""
+      position: absolute
+      width: 0
+      left: auto
+      right: 0
+      background-color: $praimary
+      height: 4px
+      bottom: -37px
+      transition: all 0.5s
+    &-link:hover
+      color: $praimary
+      left: 0
+      right: auto
+    &-link:hover::before
+      width: 100%
+      left: 0
+      right: auto 

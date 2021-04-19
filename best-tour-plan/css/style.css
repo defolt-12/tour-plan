@@ -16,6 +16,38 @@ label.error {
   z-index: 50;
 }
 
+.search__button:hover,
+.subscribe__button:hover {
+  background-color: #0A223D;
+}
+
+.button:hover,
+.card-button:hover,
+.footer__button:hover {
+  color: #EC1F46;
+  background-color: #d8e610;
+}
+
+.user__name:hover {
+  color: #EC1F46;
+}
+
+.breadCrumb a:hover {
+  background-color: red;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__link:hover {
+  filter: brightness(150%);
+}
+
+.footer-bottom a:hover {
+  color: #EC1F46;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -391,7 +423,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 40px;
 }
 
@@ -501,6 +533,30 @@ template {
   text-transform: uppercase;
 }
 
+.menu__item-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: auto;
+  right: 0;
+  background-color: #EC1F46;
+  height: 4px;
+  bottom: -37px;
+  transition: all 0.5s;
+}
+
+.menu__item-link:hover {
+  color: #EC1F46;
+  left: 0;
+  right: auto;
+}
+
+.menu__item-link:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
 .breadCrumb {
   padding-top: 19px;
   padding-bottom: 18px;
@@ -523,7 +579,7 @@ template {
 
 .hotel {
   padding-top: 24px;
-  padding-bottom: 70px;
+  padding-bottom: 66px;
 }
 
 .hotel-info {
@@ -1076,7 +1132,7 @@ template {
 
 .newsletter {
   position: relative;
-  padding: 101px 0 87px 0;
+  padding: 99px 0 87px 0;
   background-image: url(../image/newsletter-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1164,6 +1220,7 @@ template {
   line-height: 15px;
   color: #fff;
   cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .reviews {
@@ -1174,8 +1231,8 @@ template {
   font-family: Mulish;
   font-style: normal;
   font-weight: bold;
-  font-size: 38px;
-  line-height: 47px;
+  font-size: 36px;
+  line-height: 43px;
   text-align: center;
   text-transform: uppercase;
   margin-top: 2px;
@@ -1222,7 +1279,7 @@ template {
 .reviews-slider__button {
   position: absolute;
   z-index: 99;
-  top: 50%;
+  top: 46%;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -1251,7 +1308,7 @@ template {
   align-items: center;
   position: relative;
   background-color: #fff;
-  padding: 0 62px 30px;
+  padding: 0 96px 30px;
   border-radius: 8px;
   height: 280px;
 }
@@ -1406,7 +1463,7 @@ template {
   align-items: start;
 }
 
-.footer__logo {
+.footer-logo-link {
   max-width: 168px;
   margin-top: 10px;
   height: 169px;
@@ -1442,24 +1499,25 @@ template {
 .footer__links {
   display: flex;
   align-items: center;
-  min-width: 86px;
-  padding-top: 6px;
+  min-width: 82px;
+  padding-top: 2px;
   justify-content: space-between;
 }
 
-.footer__link--nospace {
+.footer__link-nospace {
   white-space: nowrap;
 }
 
 .footer__contact-details {
   grid-column: span 2;
-  margin-top: 13px;
+  margin-top: 7px;
 }
 
 .footer__contact-form {
   grid-column: span 2;
   margin-bottom: 75px;
-  margin-top: 13px;
+  margin-top: -5px;
+  padding-left: 5px;
 }
 
 .footer__form {
@@ -1467,7 +1525,7 @@ template {
   align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 17px;
+  margin-top: 20px;
   padding-left: 3px;
 }
 
@@ -1494,7 +1552,7 @@ template {
 }
 
 .footer__title--inline {
-  margin: 5px 47px 0 2px;
+  margin: -4px 47px 0 6px;
 }
 
 .footer__item {
@@ -1686,7 +1744,7 @@ template {
   font-family: Mulish;
   font-size: 12px;
   line-height: 15px;
-  color: #BDBDBD;
+  color: #333333;
 }
 
 .modal__message {
@@ -1830,6 +1888,10 @@ template {
     margin-bottom: 30px;
     width: 100%;
   }
+  .hotel-slider__button--prev, .hotel-slider__button--next {
+    width: 9px;
+    height: 16px;
+  }
   .hotel-slider__img {
     width: 100%;
   }
@@ -1883,7 +1945,7 @@ template {
     grid-template-rows: min-content 1fr;
     grid-gap: 0px;
   }
-  .footer__logo {
+  .footer-logo-link {
     grid-column: span 1;
     grid-row: 1 / 2;
     max-width: 104px;
@@ -1965,7 +2027,7 @@ template {
     z-index: 99;
   }
   .header__search {
-    margin-right: 71px;
+    margin-right: 66px;
     margin-left: 47px;
   }
   .header .user__name {
@@ -1981,6 +2043,9 @@ template {
   }
   .menu {
     justify-content: space-around;
+  }
+  .hotel {
+    padding-bottom: 60px;
   }
   .hotel-info__offer {
     padding: 4px 8px;
@@ -2019,21 +2084,28 @@ template {
   .ratting {
     flex-basis: auto;
   }
+  .newsletter {
+    padding: 92px 0 92px 0;
+  }
   .reviews {
-    padding: 27px 0 60px 0;
+    padding: 19px 0 60px 0;
   }
   .reviews-slider__item {
     margin: 45px auto -15px;
-    padding: 0 30px 30px;
+    padding: 0 0px 30px;
   }
   .reviews-slider__profile {
-    padding: 0 34px 30px;
+    padding: 0 66px 0px;
+    height: 299px;
   }
   .reviews-slider__avatar {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+  }
+  .reviews-slider__button {
+    top: 47%;
   }
   .activities {
-    padding: 60px 20px 50px 20px;
+    padding: 43px 20px 50px 20px;
   }
   .activities__card {
     height: 255px;
@@ -2054,8 +2126,8 @@ template {
     margin-left: 2px;
   }
   .footer__social-network {
-    margin-top: 16px;
-    margin-left: 0px;
+    margin-top: 10px;
+    margin-left: -4px;
   }
   .footer__links {
     min-width: 82px;
@@ -2064,17 +2136,20 @@ template {
     height: 109px;
   }
   .footer__categories, .footer__legal {
-    margin-top: 38px;
+    margin-top: 25px;
     margin-left: 2px;
   }
   .footer__legal {
-    margin-top: 38px;
+    margin-top: 25px;
   }
   .footer__information {
-    margin-top: 39px;
+    margin-top: 26px;
   }
   .footer__title--mb {
     margin: 0 0 17px 0;
+  }
+  .footer__title--inline {
+    margin: -4px 43px 0 6px;
   }
   .footer__text {
     margin-bottom: 21px;
@@ -2088,6 +2163,12 @@ template {
   }
   .footer-bottom {
     margin-left: 3px;
+  }
+  .footer__contact-form {
+    padding-left: 0;
+  }
+  .footer__form {
+    padding-left: 0;
   }
 }
 
@@ -2560,6 +2641,7 @@ template {
     max-width: 107px;
     justify-content: space-between;
     margin-top: 20px;
+    margin-left: 6px;
   }
   .footer__info {
     flex-basis: 100%;
@@ -2598,12 +2680,17 @@ template {
     padding-top: 17px;
   }
   .hotel {
+    margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 40px;
   }
   .hotel-slider {
     height: 179px;
     margin-bottom: 18px;
+  }
+  .hotel-slider__button--prev, .hotel-slider__button--next {
+    width: 4px;
+    height: 7px;
   }
   .hotel-info__left {
     padding-top: 4px;
@@ -2658,7 +2745,7 @@ template {
     margin-bottom: 11px;
   }
   .activities {
-    padding-top: 54px;
+    padding-top: 47px;
     padding-bottom: 40px;
   }
   .activities-title {
@@ -2700,11 +2787,13 @@ template {
     margin-bottom: 9px;
   }
   .footer__contact-form {
+    margin-top: 31px;
     margin-bottom: 10px;
   }
   .footer__form {
-    margin-top: 9px;
+    margin-top: -15px;
     margin-left: -2px;
+    margin-right: 3px;
   }
   .footer__message {
     margin-bottom: 14px;
