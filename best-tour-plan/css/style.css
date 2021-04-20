@@ -862,11 +862,15 @@ template {
   margin-left: 1px;
 }
 
-.map {
+.ymap-container {
   width: 347px;
   height: 213px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.map {
+  width: 100%;
 }
 
 .otherPackages {
@@ -1898,7 +1902,7 @@ template {
   .booking {
     max-width: 340px;
   }
-  .map {
+  .ymap-container {
     height: 210px;
   }
   .reviews {
@@ -2078,7 +2082,7 @@ template {
     max-width: 48%;
     padding: 28px 18px 28px 20px;
   }
-  .map {
+  .ymap-container {
     max-width: 48%;
   }
   .ratting {
@@ -2500,7 +2504,7 @@ template {
   .booking {
     min-width: 100%;
   }
-  .map {
+  .ymap-container {
     min-width: 100%;
   }
   .newsletter {

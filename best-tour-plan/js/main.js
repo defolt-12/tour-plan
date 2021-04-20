@@ -122,7 +122,7 @@ AOS.init({
     },
   });
 
-
+const image = document.querySelector('.ymap-container-img');
 //Переменная для включения/отключения индикатора загрузки
 // var spinner = $('.ymap-container').children('.loader');
 //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
@@ -143,8 +143,6 @@ function init () {
       // Опции.
       // Необходимо указать данный тип макета.
       iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/map-marker.png',
       // Размеры метки.
       iconImageSize: [50, 50],
       // Смещение левого верхнего угла иконки относительно
@@ -157,10 +155,7 @@ function init () {
   var layer = myMapTemp.layers.get(0).get(0);
  
   // Решение по callback-у для определения полной загрузки карты
-  waitForTilesLoad(layer).then(function() {
-    // Скрываем индикатор загрузки после полной загрузки карты
-    spinner.removeClass('is-active');
-  });
+  waitForTilesLoad(layer);
 }
  
 // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
@@ -221,18 +216,19 @@ function loadScript(url, callback){
 // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
 var ymap = function() {
   $('.ymap-container').mouseenter(function(){
+    console.log(123);
       if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
  
                 // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
         check_if_load = true; 
  
                 // Показываем индикатор загрузки до тех пор, пока карта не загрузится
-        spinner.addClass('is-active');
  
                 // Загружаем API Яндекс.Карт
         loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
-           ymaps.load(init);
+          ymaps.load(init);
+          image.style.display = "none";
         });                
       }
     }
@@ -245,3 +241,8 @@ $(function() {
   ymap();
  
 });
+
+selector.addEventListener('ymap-container', function() {
+
+  
+}, {once: true});
